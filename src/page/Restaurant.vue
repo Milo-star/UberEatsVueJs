@@ -6,11 +6,13 @@
   </router-link>
 
   <div>
-    <img :src="restaurant.image" alt="">
+    <div>
+      <img :src="restaurant.image" alt="">
+    </div>
+    <p>Nom du restaurant: <b>{{ restaurant.name }}</b></p>
+    <p>Note du restaurant: <b>{{ restaurant.note }}</b></p>
+    <p>Temps de livraison: <b>{{ restaurant.drive_time }}</b></p>
   </div>
-  <p>{{ restaurant.name }}</p>
-  <p>Note du restaurant: {{ restaurant.note }}</p>
-  <p>Temps de livraison: {{ restaurant.drive_time }}</p>
 </template>
 
 <script>
@@ -31,12 +33,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#return{
-  margin: 1.5rem 2rem;
-  cursor: pointer;
-  pointer-events: none;
-  text-decoration: none;
-  color: #000;
-}
+  #return{
+    margin: 1.5rem 2rem;
+    cursor: pointer;
+    pointer-events: none;
+    text-decoration: none;
+    color: #000;
+  }
+
+  img{
+    width: 25%;
+    height: 25%;
+  }
 
 </style>
