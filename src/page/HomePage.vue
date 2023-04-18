@@ -123,6 +123,10 @@
                     align-items: center;
                     padding: 1rem;
 
+                    &:hover{
+                        background-color: #f6f6f6;
+                    }
+
                     .wrapper--img{
                         height: 60px;
                         width: 60px;
