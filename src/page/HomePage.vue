@@ -124,6 +124,7 @@
                     display: flex;
                     align-items: center;
                     padding: 1rem;
+                    color: black;
 
                     &:hover{
                         background-color: #f6f6f6;

@@ -2,7 +2,9 @@
     <div class="restaurant--row">
         <h2 class="title">Nos restaurants</h2>
         <div class="wrapper--card">
-            <RestaurantCard v-for="(card, index) in three_restaurant" :info_restaurant="card" :key="index"/>
+            <Router-link class="restaurant--wrapper" v-for="(restaurant, index) in three_restaurant" :key="index" :to="{name: 'Restaurant', params: {name: restaurant.name }}">
+                <RestaurantCard :info_restaurant="restaurant"/>
+            </Router-link>
         </div>
     </div>
 </template>
@@ -23,6 +25,12 @@
 
 <style lang="scss">
     .restaurant--row{
+        .restaurant--wrapper{
+            width: 32%;
+            color: black;
+            text-decoration: none;
+        }
+
         .title{
             font-size: 2rem;
         }
